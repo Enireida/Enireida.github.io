@@ -1,0 +1,97 @@
+/* ==========================================================================
+   Base — reset, page defaults, typography and layout helpers.
+   ========================================================================== */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--c-cream);
+  color: var(--c-ink);
+  font-family: var(--font);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { display: block; max-width: 100%; height: auto; }
+
+a { color: inherit; }
+
+p { margin: 0; }
+
+ul, ol { margin: 0; padding: 0; list-style: none; }
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--c-wine);
+  outline-offset: 3px;
+}
+
+::selection { background: var(--c-wine); color: var(--c-cream); }
+
+h1, h2, h3 {
+  margin: 0;
+  font-weight: 800;
+  font-stretch: 72%;
+  text-transform: uppercase;
+  line-height: .9;
+  letter-spacing: -.01em;
+  color: var(--c-wine);
+  text-wrap: balance;
+}
+
+/* Layout ------------------------------------------------------------------ */
+
+.container {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.section { padding-block: var(--section-y); }
+
+section[id] { scroll-margin-top: var(--nav-h); }
+
+/* Type helpers ------------------------------------------------------------ */
+
+.display {
+  font-size: var(--fs-display);
+  font-stretch: 62%;
+  font-weight: 900;
+}
+
+.display em,
+.hero__title em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--c-moss);
+}
+
+.eyebrow {
+  font-size: var(--fs-small);
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--c-muted);
+}
+
+.lead { font-size: var(--fs-lead); max-width: 44ch; }
+
+/* Scroll reveal (only active when JS is running) --------------------------- */
+
+.js .reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity .7s var(--ease), transform .7s var(--ease);
+  transition-delay: var(--delay, 0s);
+}
+
+.js .reveal.is-visible { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+}

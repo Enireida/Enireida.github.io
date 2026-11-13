@@ -1,328 +1,155 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Enireida Reci, software engineer based in Tirana, Albania.">
-<title>Enireida Reci Portfolio</title>
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://enireida.github.io/">
-<meta property="og:title" content="Enireida Reci, Software Engineer">
-<meta property="og:description" content="Software engineer based in Tirana, Albania. Freelance developer since 2024, builder of Forge, a gym management platform.">
-<meta property="og:image" content="https://enireida.github.io/img/forge-admin.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,400..900;1,62..125,400..900&display=swap">
-<style>
-:root{
-  color-scheme:light;
-  --wine:#7A1D22; --wine-d:#561217; --blush:#EFE1DB; --cream:#FBF6EE; --rose:#D39B94; --tan:#E3C7A6; --sage:#A3AE88; --ink:#2E0F12; --muted:#7D5A55;
-  --f:"Archivo","Helvetica Neue",Arial,sans-serif;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--f);font-size:16.5px;line-height:1.6}
-a{color:inherit}
-a:focus-visible,button:focus-visible{outline:2px solid var(--wine);outline-offset:3px}
-::selection{background:var(--wine);color:var(--cream)}
-.in{max-width:1180px;margin:0 auto;padding-inline:24px}
-h1,h2,h3{margin:0;font-weight:800;font-stretch:72%;text-transform:uppercase;line-height:.9;letter-spacing:-.01em;color:var(--wine);text-wrap:balance}
-.eyebrow{font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-.btn{display:inline-block;font-family:var(--f);font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--wine);color:var(--cream);padding:15px 28px;border-radius:999px;text-decoration:none;border:0;cursor:pointer;transition:background .2s,transform .2s}
-.btn:hover{background:var(--wine-d);transform:translateY(-2px)}
-.btn.line{background:transparent;color:var(--wine);box-shadow:inset 0 0 0 1.5px var(--wine)}
-.btn.line:hover{background:var(--wine);color:var(--cream)}
-.arrow{fill:none;stroke:var(--ink);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Enireida Reci, software engineer based in Tirana, Albania.">
+  <meta name="theme-color" content="#EAB4BB">
+  <title>Enireida Reci Portfolio</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
-/* nav */
-.nav{background:var(--blush)}
-.nav .in{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:18px}
-.logo{font-weight:800;font-stretch:72%;font-size:24px;text-transform:uppercase;color:var(--wine);text-decoration:none}
-.nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
-.nav ul a{text-decoration:none}
-.nav ul a:hover{color:var(--wine)}
-.nav .btn{padding:11px 22px;font-size:12px}
-.menu-btn{display:none}
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://enireida.github.io/">
+  <meta property="og:title" content="Enireida Reci, Software Engineer">
+  <meta property="og:description" content="Software engineer based in Tirana, Albania. Freelance developer since 2024, builder of Forge, a gym management platform.">
+  <meta property="og:image" content="https://enireida.github.io/img/forge-admin.jpg">
+  <meta name="twitter:card" content="summary_large_image">
 
-/* hero */
-.hero{background:var(--blush);overflow:hidden}
-.hero .in{padding-block:40px 70px;display:grid;grid-template-columns:1fr;gap:10px}
-.hero h1{font-size:clamp(64px,12.5vw,190px);font-stretch:62%;font-weight:900;line-height:.82}
-.hero h1 em{font-style:italic;font-weight:400;color:var(--rose)}
-.hero-row{display:grid;grid-template-columns:1fr 1.15fr;gap:40px;align-items:center;margin-top:30px}
-.hero-copy{display:grid;gap:22px}
-.hero-copy .big{font-size:clamp(21px,2.3vw,27px);line-height:1.35;margin:0;font-weight:500;max-width:30ch}
-.hero-copy .big b{color:var(--wine)}
-.hero-copy .ctas{display:flex;gap:12px;flex-wrap:wrap}
-.notes{display:flex;gap:28px;flex-wrap:wrap;margin-top:6px}
-.notes div{display:flex;align-items:flex-start;gap:8px;font-weight:700;font-stretch:80%;text-transform:uppercase;font-size:15px;line-height:1.15;color:var(--wine)}
-.notes svg{width:34px;height:30px;flex:none}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,400..900;1,62..125,400..900&display=swap">
 
-/* hero stack of project cards */
-.stack{position:relative;height:430px}
-.card{position:absolute;border-radius:18px;box-shadow:0 20px 44px rgba(46,15,18,.18);overflow:hidden;background:#fff;font-size:12px;transition:transform .35s}
-.card .top{display:flex;align-items:center;gap:6px;padding:10px 12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:10.5px}
-.card .top i{width:8px;height:8px;border-radius:50%;background:currentColor;opacity:.35}
-.card .top span{margin-left:6px}
-
-/* ticker */
-.ticker{background:var(--wine);color:var(--cream);overflow:hidden;padding-block:14px}
-.ticker .track{display:flex;width:max-content;animation:roll 40s linear infinite;gap:0}
-.ticker span{font-weight:800;font-stretch:65%;text-transform:uppercase;font-size:28px;padding-right:34px;white-space:nowrap}
-.ticker span::after{content:"✳";padding-left:34px;color:var(--rose)}
-@keyframes roll{to{transform:translateX(-50%)}}
-
-/* why */
-.why{padding-block:110px 90px}
-.why .head{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:56px}
-.why h2{font-size:clamp(50px,7.5vw,110px);font-stretch:62%;font-weight:900}
-.why .head p{margin:0;font-size:19px;max-width:44ch}
-.reasons{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;align-items:start}
-.r{padding:34px 26px;display:grid;gap:12px}
-.r .n{font-weight:900;font-stretch:62%;font-size:64px;line-height:.8}
-.r h3{font-size:25px;font-stretch:78%;color:inherit}
-.r p{margin:0;font-size:15px;line-height:1.55}
-.r1{background:var(--wine);color:var(--cream);border-radius:200px 200px 24px 24px;padding-top:70px}
-.r1 .n{color:var(--rose)}
-.r2{background:var(--tan);border-radius:24px 90px 24px 24px;margin-top:50px}
-.r2 .n,.r2 h3{color:var(--wine-d)}
-.r3{background:var(--blush);border-radius:24px;border:2px dashed var(--rose)}
-.r3 .n,.r3 h3{color:var(--wine)}
-.r4{background:var(--sage);color:var(--ink);border-radius:24px 24px 200px 200px;padding-bottom:80px;margin-top:30px}
-.r4 .n{color:#fff}
-.r4 h3{color:var(--ink)}
-
-/* work */
-.work{padding-block:90px;background:var(--blush);border-radius:60px 60px 0 0}
-.work .head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:48px}
-.work h2{font-size:clamp(50px,7.5vw,110px);font-stretch:62%;font-weight:900}
-.projects{display:grid;grid-template-columns:repeat(6,1fr);gap:22px}
-.p{background:var(--cream);border-radius:28px;padding:32px;display:grid;gap:14px;align-content:start;position:relative}
-.p h3{font-size:clamp(30px,3.3vw,44px);font-stretch:65%;font-weight:900}
-.p .what{margin:0;color:var(--muted);font-weight:600;font-size:14px;text-transform:uppercase;letter-spacing:.06em}
-.p p{margin:0}
-.tags{display:flex;flex-wrap:wrap;gap:7px;margin:4px 0 0;padding:0;list-style:none}
-.tags li{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:999px;background:var(--blush);color:var(--wine)}
-.p5{grid-column:1/-1;background:var(--sage);border-radius:28px}
-.p5 .tags li{background:rgba(255,255,255,.55)}
-.p5 .what{color:var(--ink);opacity:.7}
-
-/* experience */
-.exp{padding-block:110px 90px}
-.exp .grid{display:grid;grid-template-columns:.8fr 1.6fr;gap:60px}
-.exp h2{font-size:clamp(50px,7vw,100px);font-stretch:62%;font-weight:900;position:sticky;top:30px}
-.jobs{list-style:none;margin:0;padding:0;display:grid;gap:0}
-.job{display:grid;grid-template-columns:150px 1fr;gap:24px;padding:30px 0;border-top:2px solid var(--wine)}
-.job:last-child{border-bottom:2px solid var(--wine)}
-.job .when{font-weight:700;font-size:14px;color:var(--wine);text-transform:uppercase;letter-spacing:.04em}
-.job h3{font-size:30px;font-stretch:70%;color:var(--ink)}
-.job .org{margin:6px 0 12px;color:var(--muted);font-weight:600}
-.job ul{margin:0;padding-left:18px;display:grid;gap:6px}
-.job ul li::marker{color:var(--rose)}
-
-/* skills */
-.skills{background:var(--wine);color:var(--cream);padding-block:100px;border-radius:0 120px 0 0}
-.skills h2{color:var(--cream);font-size:clamp(50px,7vw,100px);font-stretch:62%;font-weight:900;margin-bottom:50px}
-.skills .grid{display:grid;grid-template-columns:1.6fr 1fr;gap:60px}
-.sk{display:grid;gap:26px}
-.sk .row{display:grid;grid-template-columns:130px 1fr;gap:20px;align-items:start;padding-bottom:22px;border-bottom:1px solid rgba(251,246,238,.2)}
-.sk .row b{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--tan);padding-top:6px}
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-.chips span{font-size:14px;font-weight:600;padding:6px 14px;border-radius:999px;border:1.5px solid rgba(251,246,238,.35)}
-.chips span.hot{background:var(--cream);color:var(--wine);border-color:var(--cream)}
-.langs{background:var(--cream);color:var(--ink);border-radius:30px;padding:30px;align-self:start}
-.langs h3{font-size:28px;margin-bottom:18px}
-.langs ul{list-style:none;margin:0;padding:0;display:grid;gap:14px}
-.langs li{display:flex;justify-content:space-between;align-items:center;gap:12px;font-weight:600}
-.dots{display:flex;gap:5px}
-.dots i{width:12px;height:12px;border-radius:50%;background:var(--blush)}
-.dots i.on{background:var(--wine)}
-.soft{margin-top:26px}
-.soft h3{font-size:22px;margin-bottom:12px}
-.soft p{margin:0;color:var(--muted);font-weight:500}
-
-/* education */
-.edu{padding-block:100px}
-.edu .grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:22px}
-.e{border-radius:28px;padding:32px;display:grid;gap:10px;align-content:start}
-.e h3{font-size:30px;font-stretch:68%}
-.e p{margin:0}
-.e .gpa{font-weight:900;font-stretch:62%;font-size:92px;line-height:.8;color:var(--wine)}
-.e1{background:var(--blush);border-radius:28px 28px 28px 120px}
-.e2{background:var(--tan);border-radius:120px 120px 28px 28px;padding-top:60px;text-align:center}
-.e3{background:transparent;border:2px dashed var(--wine);border-radius:28px}
-.e .eyebrow{color:var(--wine)}
-
-/* contact */
-.contact{background:var(--blush);padding-block:110px 90px;border-radius:60px 60px 0 0}
-.contact .in{display:grid;grid-template-columns:1.3fr 1fr;gap:50px;align-items:center}
-.contact h2{font-size:clamp(58px,9.5vw,150px);font-stretch:62%;font-weight:900;line-height:.84}
-.contact h2 em{font-style:italic;font-weight:400;color:var(--rose)}
-.contact .lead{font-size:20px;max-width:40ch;margin:22px 0 0}
-.cbox{background:var(--wine);color:var(--cream);border-radius:200px 200px 30px 30px;padding:80px 34px 36px;display:grid;gap:18px;text-align:center}
-.cbox .l{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--rose)}
-.cbox .v{font-size:clamp(18px,2vw,22px);font-weight:700;word-break:break-all;user-select:all}
-.cbox .btn{background:var(--cream);color:var(--wine);justify-self:center}
-.cbox .btn:hover{background:var(--tan)}
-.copied{min-height:1.4em;font-size:14px;color:var(--tan)}
-footer{background:var(--blush)}
-footer .in{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-block:22px 30px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--wine);border-top:1px solid rgba(122,29,34,.2)}
-
-@media (max-width:980px){
-  .nav{position:relative;z-index:10}
-  .nav ul{display:none}
-  .menu-btn{display:inline-block}
-  .nav.open ul{display:grid;gap:16px;position:absolute;top:100%;left:0;right:0;padding:6px 24px 26px;background:var(--blush);box-shadow:0 18px 30px rgba(46,15,18,.12)}
-  .hero-row,.why .head,.exp .grid,.skills .grid,.contact .in{grid-template-columns:1fr}
-  .reasons{grid-template-columns:1fr 1fr}
-  .r2,.r4{margin-top:0}
-  .projects{grid-template-columns:1fr 1fr}
-  .exp h2{position:static}
-  .edu .grid{grid-template-columns:1fr 1fr}
-  .e1{grid-column:1/-1}
-}
-@media (max-width:620px){
-  .in{padding-inline:16px}
-  .stack{height:380px}
-  .reasons,.edu .grid{grid-template-columns:1fr}
-  .job{grid-template-columns:1fr;gap:6px}
-  .sk .row{grid-template-columns:1fr;gap:10px}
-  .p{padding:26px}
-  .skills{border-radius:0 60px 0 0}
-}
-
-/* real screenshots */
-.card img{display:block;width:100%;height:auto}
-.c-forge{left:0;top:0;width:44%;transform:rotate(-4deg);z-index:1}
-.c-forge .top{background:var(--ink);color:var(--cream)}
-.c-kt{right:6%;bottom:0;width:60%;transform:rotate(2deg);z-index:3}
-.c-kt .top{background:#1B8A9A;color:#fff}
-.stack:hover .c-forge{transform:rotate(-7deg) translate(-8px,-6px)}
-.feature{display:grid;grid-template-columns:1fr 1.1fr;gap:50px;align-items:center;border-radius:40px;padding:56px;margin-bottom:28px}
-.feature h3{font-size:clamp(56px,7vw,104px);font-stretch:62%;font-weight:900;text-transform:none;line-height:.85;margin:8px 0 16px}
-.feature .what{margin:0;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.1em}
-.feature .tagline{font-size:19px;line-height:1.45;margin:0 0 24px;max-width:44ch}
-.flist{list-style:none;margin:0 0 20px;padding:0;display:grid;gap:12px}
-.flist li{font-size:15px;line-height:1.5}
-.flist b{display:block;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
-.forge{background:var(--wine);color:var(--cream);border-radius:40px 160px 40px 40px}
-.forge h3{color:var(--cream)} .forge h3 span{color:var(--tan)}
-.forge .what{color:var(--rose)} .forge .flist b{color:var(--tan)}
-.fshots{position:relative;min-height:560px}
-.fshots img{position:absolute;display:block;border-radius:14px;box-shadow:0 22px 50px rgba(0,0,0,.35);max-width:100%;height:auto}
-.s-admin{left:8%;top:0;width:66%}
-.s-phone{right:0;top:30px;width:30%;border-radius:22px}
-.s-kiosk{left:0;bottom:0;width:34%;transform:rotate(-4deg)}
-.kt{background:var(--cream);grid-template-columns:1.15fr 1fr;border-radius:160px 40px 40px 40px}
-.kt h3{color:#15707D}
-.kt .what{color:var(--muted)} .kt .flist b{color:#15707D}
-.kt .tags li{background:#DCEFF1;color:#15707D}
-.kshots{display:grid;grid-template-columns:1.3fr 1.2fr .8fr;gap:12px;align-items:start}
-.kshots img{display:block;width:100%;height:auto;border-radius:12px;box-shadow:0 14px 30px rgba(46,15,18,.16)}
-.kshots .k1{grid-column:1/-1}
-.kshots .k3{transform:rotate(-1.5deg)}
-.kshots .k4{transform:rotate(2deg)}
-.more{font-size:clamp(34px,4vw,54px);font-stretch:62%;font-weight:900;margin:60px 0 26px}
-@media (max-width:980px){
-  .feature,.kt{grid-template-columns:1fr;padding:40px 28px}
-  .kt .kshots{order:2}
-  .fshots{min-height:0;display:grid;grid-template-columns:2fr 1fr;gap:12px}
-  .fshots img{position:static;width:100%;transform:none}
-  .s-admin{grid-row:span 2}
-}
-@media (max-width:620px){
-  .feature,.kt,.forge{border-radius:28px;padding:30px 20px}
-  .c-forge{width:52%}.c-kt{width:78%;right:0}
-}
-.social{display:flex;gap:22px;font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase}
-.social a,.clinks a{text-decoration:none;border-bottom:2px solid currentColor;padding-bottom:2px;color:var(--wine)}
-.social a:hover{color:var(--rose)}
-.clinks{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-.clinks a{color:var(--cream);border:1.5px solid rgba(251,246,238,.5);border-radius:999px;padding:8px 18px;font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
-.clinks a:hover{background:var(--cream);color:var(--wine)}
-footer a{text-decoration:none}footer a:hover{text-decoration:underline}
-.c-phone{right:2%;top:0;width:28%;transform:rotate(5deg);z-index:2;border-radius:24px;background:transparent;box-shadow:none}
-.c-phone img{filter:drop-shadow(0 18px 30px rgba(46,15,18,.25))}
-@media (max-width:620px){.c-phone{width:34%}}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ticker .track{animation:none}.btn:hover{transform:none}.card{transition:none}}
-</style>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
 </head>
 <body>
 
-
-<header class="nav">
-  <div class="in">
-    <a class="logo" href="#top">Enireida Reci</a>
-    <button class="btn menu-btn" type="button" id="menuBtn" aria-expanded="false" aria-controls="menu">Menu</button>
-    <ul id="menu">
-      <li><a href="#why">Why me</a></li><li><a href="#work">Work</a></li><li><a href="#experience">Experience</a></li><li><a href="#skills">Skills</a></li><li><a href="#education">Education</a></li><li><a href="#contact">Contact</a></li><li><a href="https://github.com/Enireida" target="_blank" rel="noopener">GitHub ↗</a></li><li><a href="https://www.linkedin.com/in/enireida-reci-b900b1340/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+<!-- ======================= Navigation ======================= -->
+<header class="site-nav">
+  <div class="container site-nav__inner">
+    <a class="site-nav__logo" href="#top">Enireida Reci</a>
+    <button class="btn site-nav__toggle" type="button" id="menuBtn" aria-expanded="false" aria-controls="menu">Menu</button>
+    <ul class="site-nav__menu" id="menu">
+      <li><a href="#why">Why me</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="https://github.com/Enireida" target="_blank" rel="noopener">GitHub ↗</a></li>
+      <li><a href="https://www.linkedin.com/in/enireida-reci-b900b1340/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
     </ul>
   </div>
 </header>
 
+<main>
+
+<!-- ======================= Hero ======================= -->
 <section class="hero" id="top">
-  <div class="in">
-    <h1>Hi, <em>I'm</em><br>Enireida</h1>
-    <div class="hero-row">
-      <div class="hero-copy">
-        <p class="big">I'm a software engineer who has <b>already built real products for real clients</b>, and I'm ready to do the same for your team.</p>
-        <div class="notes">
-          <div><svg viewBox="0 0 34 30" aria-hidden="true"><path class="arrow" d="M3 6 C 8 22, 18 26, 30 22 M23 17 L30 22 L24 28"/></svg>Freelance developer<br>since 2024</div>
-          <div><svg viewBox="0 0 34 30" aria-hidden="true"><path class="arrow" d="M3 6 C 8 22, 18 26, 30 22 M23 17 L30 22 L24 28"/></svg>BSc Software Eng.<br>UNYT · GPA 3.53</div>
-        </div>
-        <div class="ctas">
+  <div class="container hero__inner">
+    <h1 class="hero__title">Hi, <em>I'm</em><br>Enireida</h1>
+
+    <div class="hero__row">
+      <div class="hero__copy">
+        <p class="hero__intro">I'm a software engineer who has <b>already built real products for real clients</b>, and I'm ready to do the same for your team.</p>
+
+        <ul class="hero__facts">
+          <li>
+            <svg viewBox="0 0 34 30" aria-hidden="true"><path d="M3 6 C 8 22, 18 26, 30 22 M23 17 L30 22 L24 28"/></svg>
+            <span>Freelance developer<br>since 2024</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 34 30" aria-hidden="true"><path d="M3 6 C 8 22, 18 26, 30 22 M23 17 L30 22 L24 28"/></svg>
+            <span>BSc Software Eng.<br>UNYT · GPA 3.53</span>
+          </li>
+        </ul>
+
+        <div class="hero__ctas">
           <a class="btn" href="#work">See my work</a>
-          <a class="btn line" href="#contact">Get in touch</a>
+          <a class="btn btn--outline" href="#contact">Get in touch</a>
         </div>
-        <div class="social"><a href="https://www.linkedin.com/in/enireida-reci-b900b1340/" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://github.com/Enireida" target="_blank" rel="noopener">GitHub ↗</a>
+
+        <div class="links">
+          <a href="https://www.linkedin.com/in/enireida-reci-b900b1340/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="https://github.com/Enireida" target="_blank" rel="noopener">GitHub ↗</a>
         </div>
       </div>
 
-      <div class="stack" aria-label="Screens from my projects">
-        <figure class="card c-forge"><div class="top"><i></i><i></i><i></i><span>Forge · admin</span></div><img src="img/forge-admin.jpg" width="583" height="822" alt="Forge admin panel, new member registration screen"></figure>
-        <figure class="card c-phone"><img src="img/forge-coach.jpg" width="220" height="410" alt="Forge AI coach on a phone"></figure>
-        <figure class="card c-kt"><div class="top"><i></i><i></i><i></i><span class="url">keytours</span></div><img src="img/keytours-home.jpg" width="457" height="258" alt="KeyTours homepage with destination search"></figure>
+      <div class="hero__stack" aria-label="Screens from my projects">
+        <figure class="shot shot--forge">
+          <div class="shot__bar"><i></i><i></i><i></i><span>Forge · admin</span></div>
+          <img src="img/forge-admin.jpg" width="583" height="822" alt="Forge admin panel, new member registration screen">
+        </figure>
+        <figure class="shot shot--phone">
+          <img src="img/forge-coach.jpg" width="220" height="410" alt="Forge AI coach on a phone">
+        </figure>
+        <figure class="shot shot--keytours">
+          <div class="shot__bar"><i></i><i></i><i></i><span>keytours</span></div>
+          <img src="img/keytours-home.jpg" width="457" height="258" alt="KeyTours homepage with destination search">
+        </figure>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ======================= Tech ticker ======================= -->
 <div class="ticker" aria-hidden="true">
-  <div class="track">
+  <div class="ticker__track">
     <span>Java</span><span>React</span><span>Spring Boot</span><span>Node.js</span><span>Python</span><span>TypeScript</span><span>MySQL</span><span>PostgreSQL</span><span>Supabase</span><span>Docker</span>
     <span>Java</span><span>React</span><span>Spring Boot</span><span>Node.js</span><span>Python</span><span>TypeScript</span><span>MySQL</span><span>PostgreSQL</span><span>Supabase</span><span>Docker</span>
   </div>
 </div>
 
-<section class="why" id="why">
-  <div class="in">
-    <div class="head">
-      <h2>Why hire me?</h2>
-      <p>Most graduates show you class projects. I can show you software that real businesses use every day, and tell you exactly how I built it.</p>
+<!-- ======================= Why hire me ======================= -->
+<section class="section why" id="why">
+  <div class="container">
+    <div class="why__head reveal">
+      <h2 class="display">Why hire me?</h2>
+      <p class="lead">Most graduates show you class projects. I can show you software that real businesses use every day, and tell you exactly how I built it.</p>
     </div>
-    <div class="reasons">
-      <div class="r r1"><span class="n">01</span><h3>I've shipped for clients</h3><p>Since 2024 I've built websites, web apps and Forge, a full gym management system, for real businesses, from the first meeting to deployment and maintenance.</p></div>
-      <div class="r r2"><span class="n">02</span><h3>I learn fast</h3><p>New codebase, new framework, new language: I pick it up quickly and start delivering. I've worked in Java, Python, JavaScript, TypeScript, C#, PHP and more.</p></div>
-      <div class="r r3"><span class="n">03</span><h3>I explain things clearly</h3><p>I talk to non-technical clients about technical decisions every week. Your product and business teams will always know where things stand.</p></div>
-      <div class="r r4"><span class="n">04</span><h3>I lead when needed</h3><p>I led teams on university projects and organise fundraising events with the UNYT Charity Club. I take ownership and follow through.</p></div>
+
+    <div class="why__grid">
+      <article class="reason reason--wine reveal">
+        <span class="reason__num">01</span>
+        <h3>I've shipped for clients</h3>
+        <p>Since 2024 I've built websites, web apps and Forge, a full gym management system, for real businesses, from the first meeting to deployment and maintenance.</p>
+      </article>
+      <article class="reason reason--sand reveal" style="--delay:.08s">
+        <span class="reason__num">02</span>
+        <h3>I learn fast</h3>
+        <p>New codebase, new framework, new language: I pick it up quickly and start delivering. I've worked in Java, Python, JavaScript, TypeScript, C#, PHP and more.</p>
+      </article>
+      <article class="reason reason--blush reveal" style="--delay:.16s">
+        <span class="reason__num">03</span>
+        <h3>I explain things clearly</h3>
+        <p>I talk to non-technical clients about technical decisions every week. Your product and business teams will always know where things stand.</p>
+      </article>
+      <article class="reason reason--olive reveal" style="--delay:.24s">
+        <span class="reason__num">04</span>
+        <h3>I lead when needed</h3>
+        <p>I led teams on university projects and organise fundraising events with the UNYT Charity Club. I take ownership and follow through.</p>
+      </article>
     </div>
   </div>
 </section>
 
-<section class="work" id="work">
-  <div class="in">
-    <div class="head">
-      <h2>Selected work</h2>
+<!-- ======================= Selected work ======================= -->
+<section class="section work" id="work">
+  <div class="container">
+    <div class="work__head reveal">
+      <h2 class="display">Selected work</h2>
       <p class="eyebrow">Built, tested and delivered</p>
     </div>
-    <article class="feature forge">
-      <div class="ftext">
-        <p class="what">Bachelor thesis &amp; client project · 2026</p>
-        <h3>Forge<span>.</span></h3>
-        <p class="tagline">A platform for modern gyms, built in Tirana. One system for the front desk, the door and every member.</p>
-        <ul class="flist">
+
+    <!-- Forge -->
+    <article class="project project--forge reveal">
+      <div class="project__text">
+        <p class="project__kicker">Bachelor thesis &amp; client project · 2026</p>
+        <h3 class="project__title">Forge<span>.</span></h3>
+        <p class="project__tagline">A platform for modern gyms, built in Tirana. One system for the front desk, the door and every member.</p>
+        <ul class="project__features">
           <li><b>RFID access</b>Members tap a card or enter an auto-generated 4-digit PIN at the door kiosk. Attendance is logged in real time.</li>
           <li><b>Front desk</b>Register members with a photo, then manage plans, payments, equipment, announcements and an exercise library.</li>
           <li><b>Classes &amp; PT</b>Group classes, attendance tracking and personal training packages.</li>
@@ -332,25 +159,26 @@ footer a{text-decoration:none}footer a:hover{text-decoration:underline}
         </ul>
         <ul class="tags"><li>Java</li><li>JavaFX</li><li>MySQL</li></ul>
       </div>
-      <div class="fshots">
-        <img class="s-admin" src="img/forge-admin.jpg" width="583" height="822" loading="lazy" decoding="async" alt="Forge admin: new member registration with photo, identity and membership with RFID card">
-        <img class="s-phone" src="img/forge-coach.jpg" width="220" height="410" loading="lazy" decoding="async" alt="Forge AI coach chat on a phone">
-        <img class="s-kiosk" src="img/forge-kiosk.jpg" width="236" height="350" loading="lazy" decoding="async" alt="Forge door kiosk with RFID reader and PIN pad">
+      <div class="project__shots">
+        <img class="forge-admin" src="img/forge-admin.jpg" width="583" height="822" loading="lazy" decoding="async" alt="Forge admin: new member registration with photo, identity and membership with RFID card">
+        <img class="forge-phone" src="img/forge-coach.jpg" width="220" height="410" loading="lazy" decoding="async" alt="Forge AI coach chat on a phone">
+        <img class="forge-kiosk" src="img/forge-kiosk.jpg" width="236" height="350" loading="lazy" decoding="async" alt="Forge door kiosk with RFID reader and PIN pad">
       </div>
     </article>
 
-    <article class="feature kt">
-      <div class="kshots">
-        <img class="k1" src="img/keytours-home.jpg" width="457" height="258" loading="lazy" decoding="async" alt="KeyTours homepage hero with destination search">
-        <img class="k2" src="img/keytours-destinations.jpg" width="457" height="294" loading="lazy" decoding="async" alt="Destination cards with discounts and prices per person">
-        <img class="k3" src="img/keytours-auth.jpg" width="668" height="568" loading="lazy" decoding="async" alt="Register and login forms in Albanian">
-        <img class="k4" src="img/keytours-admin.jpg" width="370" height="435" loading="lazy" decoding="async" alt="KeyTours admin panel login">
+    <!-- KeyTours -->
+    <article class="project project--keytours reveal">
+      <div class="project__shots">
+        <img class="kt-home" src="img/keytours-home.jpg" width="457" height="258" loading="lazy" decoding="async" alt="KeyTours homepage hero with destination search">
+        <img class="kt-destinations" src="img/keytours-destinations.jpg" width="457" height="294" loading="lazy" decoding="async" alt="Destination cards with discounts and prices per person">
+        <img class="kt-auth" src="img/keytours-auth.jpg" width="668" height="568" loading="lazy" decoding="async" alt="Register and login forms in Albanian">
+        <img class="kt-admin" src="img/keytours-admin.jpg" width="370" height="435" loading="lazy" decoding="async" alt="KeyTours admin panel login">
       </div>
-      <div class="ftext">
-        <p class="what">Full-stack web app · UNYT</p>
-        <h3>KeyTours</h3>
-        <p class="tagline">A booking website for a travel agency, fully in Albanian. Visitors find a trip, create an account and book it. The agency runs everything from its own admin panel.</p>
-        <ul class="flist">
+      <div class="project__text">
+        <p class="project__kicker">Full-stack web app · UNYT</p>
+        <h3 class="project__title">KeyTours</h3>
+        <p class="project__tagline">A booking website for a travel agency, fully in Albanian. Visitors find a trip, create an account and book it. The agency runs everything from its own admin panel.</p>
+        <ul class="project__features">
           <li><b>Homepage</b>Hero with search by destination, category and price.</li>
           <li><b>Destinations</b>Filter and sort trips, with discounts and price per person on every card.</li>
           <li><b>User flow</b>Register, log in, book.</li>
@@ -360,99 +188,204 @@ footer a{text-decoration:none}footer a:hover{text-decoration:underline}
       </div>
     </article>
 
-    <h3 class="more">More projects</h3>
-    <div class="projects">
-      <article class="p p5">
-        <p class="what">University</p>
-        <h3>University projects</h3>
-        <p>Web apps, desktop applications and algorithm projects across several languages and frameworks, all with Git from day one.</p>
-        <ul class="tags"><li>Git</li><li>Algorithms</li><li>Data structures</li></ul>
-      </article>
-    </div>
+    <!-- Inbox Assistant (chatbot) -->
+    <article class="project project--inbox reveal">
+      <div class="project__text">
+        <p class="project__kicker">Chatbot for small businesses · In development · 2026</p>
+        <h3 class="project__title">Inbox Assistant</h3>
+        <p class="project__tagline">An assistant for Instagram direct messages. Customers are guided with buttons and short forms, and every request arrives complete in a web panel where the team confirms, rejects or replies.</p>
+        <ul class="project__features">
+          <li><b>Conversation engine</b>Five customer flows, served in Albanian, English or Italian, detected from the customer's messages.</li>
+          <li><b>Team panel</b>Lists, search, notes and assignment, installable as a phone app with notifications.</li>
+          <li><b>Multi-tenant</b>Built to hold several businesses, each fully separated with row-level security.</li>
+          <li><b>Privacy &amp; security</b>Encrypted phone numbers and addresses, two-factor sign-in and an audit log.</li>
+          <li><b>Status</b>Foundation complete and tested. The Instagram connection is the next phase.</li>
+        </ul>
+        <ul class="tags"><li>TypeScript</li><li>Node.js</li><li>PostgreSQL</li><li>Docker</li></ul>
+      </div>
+      <div class="project__shots" aria-hidden="true">
+        <div class="chat">
+          <div class="chat__head">
+            <span class="chat__avatar">IA</span>
+            <span>Inbox Assistant<small>Automated · replies instantly</small></span>
+          </div>
+          <p class="chat__msg chat__msg--user">Hi! I'd like to place an order.</p>
+          <p class="chat__msg chat__msg--bot">Hello! I'm an automated assistant. How can I help you today?</p>
+          <div class="chat__options">
+            <span>New order</span>
+            <span>Track my order</span>
+            <span>Talk to a person</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- More projects -->
+    <h3 class="work__more reveal">More projects</h3>
+    <article class="project-card reveal">
+      <p class="eyebrow">University</p>
+      <h3>University projects</h3>
+      <p>Web apps, desktop applications and algorithm projects across several languages and frameworks, all with Git from day one.</p>
+      <ul class="tags"><li>Git</li><li>Algorithms</li><li>Data structures</li></ul>
+    </article>
   </div>
 </section>
 
-<section class="exp" id="experience">
-  <div class="in grid">
-    <h2>Experience</h2>
-    <ol class="jobs">
-      <li class="job"><div class="when">2024 – 2026</div><div><h3>Freelance Developer</h3><p class="org">Self-employed · Tirana</p>
-        <ul><li>Built Forge, a full gym management system in Java (JavaFX + MySQL): member registration, subscription tracking, attendance logging and financial reporting.</li><li>Delivered websites and web apps for several small businesses, from scoping to deployment and maintenance.</li><li>Integrated third-party APIs and explained technical decisions clearly to non-technical clients.</li></ul></div></li>
-      <li class="job"><div class="when">Feb – Jun 2025</div><div><h3>IT Office Intern</h3><p class="org">University of New York Tirana</p>
-        <ul><li>Solved hardware, software and connectivity problems for staff and students.</li><li>Handled user accounts, system updates and asset tracking.</li><li>Set up and maintained computers, printers and network equipment across campus.</li></ul></div></li>
-      <li class="job"><div class="when">Summer 2024</div><div><h3>English Camp Facilitator</h3><p class="org">Tirana Training Center</p>
-        <ul><li>Led English sessions and group activities for children, adapting on the spot to different age groups.</li></ul></div></li>
+<!-- ======================= Experience ======================= -->
+<section class="section experience" id="experience">
+  <div class="container experience__grid">
+    <h2 class="display experience__title reveal">Experience</h2>
+
+    <ol class="experience__list">
+      <li class="job reveal">
+        <div class="job__when">2024 – 2026</div>
+        <div>
+          <h3>Freelance Developer</h3>
+          <p class="job__org">Self-employed · Tirana</p>
+          <ul class="job__tasks">
+            <li>Built Forge, a full gym management system in Java (JavaFX + MySQL): member registration, subscription tracking, attendance logging and financial reporting.</li>
+            <li>Delivered websites and web apps for several small businesses, from scoping to deployment and maintenance.</li>
+            <li>Integrated third-party APIs and explained technical decisions clearly to non-technical clients.</li>
+          </ul>
+        </div>
+      </li>
+      <li class="job reveal">
+        <div class="job__when">Feb – Jun 2025</div>
+        <div>
+          <h3>IT Office Intern</h3>
+          <p class="job__org">University of New York Tirana</p>
+          <ul class="job__tasks">
+            <li>Solved hardware, software and connectivity problems for staff and students.</li>
+            <li>Handled user accounts, system updates and asset tracking.</li>
+            <li>Set up and maintained computers, printers and network equipment across campus.</li>
+          </ul>
+        </div>
+      </li>
+      <li class="job reveal">
+        <div class="job__when">Summer 2024</div>
+        <div>
+          <h3>English Camp Facilitator</h3>
+          <p class="job__org">Tirana Training Center</p>
+          <ul class="job__tasks">
+            <li>Led English sessions and group activities for children, adapting on the spot to different age groups.</li>
+          </ul>
+        </div>
+      </li>
     </ol>
   </div>
 </section>
 
-<section class="skills" id="skills">
-  <div class="in">
-    <h2>My toolbox</h2>
-    <div class="grid">
-      <div class="sk">
-        <div class="row"><b>Languages</b><div class="chips"><span class="hot">Java</span><span class="hot">JavaScript</span><span class="hot">Python</span><span>TypeScript</span><span>C#</span><span>PHP</span><span>Kotlin</span><span>Go</span></div></div>
-        <div class="row"><b>Frameworks</b><div class="chips"><span class="hot">React</span><span class="hot">Spring Boot</span><span class="hot">Node.js</span><span>Express.js</span><span>Next.js</span><span>Angular</span><span>Vue.js</span><span>Django</span><span>Flutter</span><span>Tailwind CSS</span></div></div>
-        <div class="row"><b>Databases</b><div class="chips"><span class="hot">MySQL</span><span class="hot">PostgreSQL</span><span>Supabase</span><span>MongoDB</span><span>Firebase</span><span>Oracle</span></div></div>
-        <div class="row"><b>Tools</b><div class="chips"><span class="hot">Git &amp; GitHub</span><span>Docker</span><span>Linux</span><span>VS Code</span><span>Shell scripting</span></div></div>
-        <div class="row"><b>Also</b><div class="chips"><span>REST APIs</span><span>GraphQL</span><span>Database design</span><span>Workflow automation</span></div></div>
+<!-- ======================= Skills ======================= -->
+<section class="section skills" id="skills">
+  <div class="container">
+    <h2 class="display skills__title reveal">My toolbox</h2>
+
+    <div class="skills__grid">
+      <div class="skills__groups reveal">
+        <div class="skills__group">
+          <h3>Languages</h3>
+          <ul class="chips"><li class="is-core">Java</li><li class="is-core">JavaScript</li><li class="is-core">Python</li><li>TypeScript</li><li>C#</li><li>PHP</li><li>Kotlin</li><li>Go</li></ul>
+        </div>
+        <div class="skills__group">
+          <h3>Frameworks</h3>
+          <ul class="chips"><li class="is-core">React</li><li class="is-core">Spring Boot</li><li class="is-core">Node.js</li><li>Express.js</li><li>Next.js</li><li>Angular</li><li>Vue.js</li><li>Django</li><li>Flutter</li><li>Tailwind CSS</li></ul>
+        </div>
+        <div class="skills__group">
+          <h3>Databases</h3>
+          <ul class="chips"><li class="is-core">MySQL</li><li class="is-core">PostgreSQL</li><li>Supabase</li><li>MongoDB</li><li>Firebase</li><li>Oracle</li></ul>
+        </div>
+        <div class="skills__group">
+          <h3>Tools</h3>
+          <ul class="chips"><li class="is-core">Git &amp; GitHub</li><li>Docker</li><li>Linux</li><li>VS Code</li><li>Shell scripting</li></ul>
+        </div>
+        <div class="skills__group">
+          <h3>Also</h3>
+          <ul class="chips"><li>REST APIs</li><li>GraphQL</li><li>Database design</li><li>Workflow automation</li></ul>
+        </div>
       </div>
-      <div class="langs">
+
+      <aside class="skills__aside reveal" style="--delay:.1s">
         <h3>I speak</h3>
-        <ul>
-          <li>Albanian<span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></li>
-          <li>English<span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></li>
-          <li>Turkish<span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></li>
-          <li>Italian<span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></li>
-          <li>German (A1)<span class="dots"><i class="on"></i><i></i><i></i><i></i><i></i></span></li>
+        <ul class="languages">
+          <li>Albanian<span class="dots" aria-label="5 out of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></li>
+          <li>English<span class="dots" aria-label="5 out of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></li>
+          <li>Turkish<span class="dots" aria-label="3 out of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></li>
+          <li>Italian<span class="dots" aria-label="3 out of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></li>
+          <li>German (A1)<span class="dots" aria-label="1 out of 5"><i class="on"></i><i></i><i></i><i></i><i></i></span></li>
         </ul>
-        <div class="soft"><h3>How I work</h3><p>Problem solving · Leadership · Communication · Adaptability · Attention to detail · Client management · Debugging</p></div>
+        <div class="skills__soft">
+          <h3>How I work</h3>
+          <p>Problem solving · Leadership · Communication · Adaptability · Attention to detail · Client management · Debugging</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= Education ======================= -->
+<section class="section education" id="education">
+  <div class="container education__grid">
+    <article class="edu-card edu-card--degree reveal">
+      <span class="eyebrow">Education · 2023 – 2026</span>
+      <h3>BSc in Software Engineering</h3>
+      <p><b>University of New York Tirana</b></p>
+      <p>American-style curriculum covering software development, algorithms, data structures, databases and system design. Next step for me: moving deeper into AI.</p>
+    </article>
+    <article class="edu-card edu-card--gpa reveal" style="--delay:.08s">
+      <span class="eyebrow">GPA</span>
+      <span class="edu-card__gpa">3.53</span>
+      <p>out of 4.0</p>
+    </article>
+    <article class="edu-card edu-card--clubs reveal" style="--delay:.16s">
+      <span class="eyebrow">Volunteering</span>
+      <h3>Charity Club</h3>
+      <p>Since Oct 2024. I plan and run fundraising events and community projects on campus and around Albania.</p>
+      <h3>AI Club</h3>
+      <p>Since Apr 2025. Applied AI projects, startup ideas and new trends in machine learning.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ======================= Contact ======================= -->
+<section class="section contact" id="contact">
+  <div class="container contact__inner">
+    <div class="reveal">
+      <h2 class="display contact__title">Let's work <em>together</em></h2>
+      <p class="lead contact__lead">I'm looking for a role with real responsibility, room to grow and meaningful work. If that sounds like your team, I'd love to talk.</p>
+    </div>
+
+    <div class="contact__box reveal" style="--delay:.1s">
+      <div>
+        <div class="contact__label">Email</div>
+        <div class="contact__value" id="emailAddress"><a href="mailto:recienireida@gmail.com">recienireida@gmail.com</a></div>
       </div>
+      <div>
+        <div class="contact__label">Based in</div>
+        <div class="contact__value">Tirana, Albania</div>
+      </div>
+      <div class="contact__links">
+        <a href="https://www.linkedin.com/in/enireida-reci-b900b1340/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="https://github.com/Enireida" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+      <button class="btn btn--light" type="button" id="copyBtn">Copy my email</button>
+      <span class="contact__status" id="copyStatus" aria-live="polite"></span>
     </div>
   </div>
 </section>
 
-<section class="edu" id="education">
-  <div class="in grid">
-    <div class="e e1"><span class="eyebrow">Education · 2023 – 2026</span><h3>BSc in Software Engineering</h3><p><b>University of New York Tirana</b></p><p>American-style curriculum covering software development, algorithms, data structures, databases and system design. Next step for me: moving deeper into AI.</p></div>
-    <div class="e e2"><span class="eyebrow">GPA</span><span class="gpa">3.53</span><p>out of 4.0</p></div>
-    <div class="e e3"><span class="eyebrow">Volunteering</span><h3>Charity Club</h3><p>Since Oct 2024. I plan and run fundraising events and community projects on campus and around Albania.</p><h3 style="margin-top:14px">AI Club</h3><p>Since Apr 2025. Applied AI projects, startup ideas and new trends in machine learning.</p></div>
+</main>
+
+<!-- ======================= Footer ======================= -->
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <span>© 2026 Enireida Reci</span>
+    <span>
+      <a href="https://www.linkedin.com/in/enireida-reci-b900b1340/" target="_blank" rel="noopener">LinkedIn</a> ·
+      <a href="https://github.com/Enireida" target="_blank" rel="noopener">GitHub</a>
+    </span>
   </div>
-</section>
+</footer>
 
-<section class="contact" id="contact">
-  <div class="in">
-    <div>
-      <h2>Let's work <em>together</em></h2>
-      <p class="lead">I'm looking for a role with real responsibility, room to grow and meaningful work. If that sounds like your team, I'd love to talk.</p>
-    </div>
-    <div class="cbox">
-      <div><div class="l">Email</div><div class="v" id="addr"><a href="mailto:recienireida@gmail.com">recienireida@gmail.com</a></div></div>
-      <div><div class="l">Based in</div><div class="v">Tirana, Albania</div></div>
-      <div class="clinks"><a href="https://www.linkedin.com/in/enireida-reci-b900b1340/" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://github.com/Enireida" target="_blank" rel="noopener">GitHub ↗</a></div>
-      <button class="btn" type="button" id="copyBtn">Copy my email</button>
-      <span class="copied" id="copied" aria-live="polite"></span>
-    </div>
-  </div>
-</section>
-<footer><div class="in"><span>© 2026 Enireida Reci</span><span><a href="https://www.linkedin.com/in/enireida-reci-b900b1340/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/Enireida" target="_blank" rel="noopener">GitHub</a></span></div></footer>
-
-<script>
-(function(){
-  var btn=document.getElementById('copyBtn'),msg=document.getElementById('copied'),addr=document.getElementById('addr');
-  btn.addEventListener('click',function(){
-    var t=addr.textContent.trim();
-    function fb(){var r=document.createRange();r.selectNodeContents(addr);var s=getSelection();s.removeAllRanges();s.addRange(r);msg.textContent='Selected. Press Ctrl/Cmd + C.';}
-    try{navigator.clipboard.writeText(t).then(function(){msg.textContent='Copied!';},fb);}catch(e){fb();}
-  });
-
-  var nav=document.querySelector('.nav'),menuBtn=document.getElementById('menuBtn');
-  function setMenu(open){nav.classList.toggle('open',open);menuBtn.setAttribute('aria-expanded',open);menuBtn.textContent=open?'Close':'Menu';}
-  menuBtn.addEventListener('click',function(){setMenu(!nav.classList.contains('open'));});
-  document.getElementById('menu').addEventListener('click',function(e){if(e.target.closest('a'))setMenu(false);});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&nav.classList.contains('open')){setMenu(false);menuBtn.focus();}});
-})();
-</script>
-
+<script src="js/main.js"></script>
 </body>
 </html>

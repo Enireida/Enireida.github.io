@@ -1,0 +1,53 @@
+/* ==========================================================================
+   Design tokens — the single place to change colours, type and spacing.
+   ========================================================================== */
+
+:root {
+  color-scheme: light;
+
+  /* Palette */
+  --c-rose:  #C56A79;
+  --c-olive: #A0964C;
+  --c-blush: #EAB4BB;
+  --c-moss:  #61602D;
+  --c-sand:  #C6A77E;
+  --c-wine:  #90414D;
+
+  /* Tints and neutrals derived from the palette */
+  --c-wine-dark:   #73323D;
+  --c-blush-light: #F6DADD;
+  --c-cream:       #FBF4EC;
+  --c-cream-2:     #F3E6D8;
+  --c-ink:         #2A1719;
+  --c-muted:       #6E5356;
+
+  /* Typography */
+  --font: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --fs-body: 15.5px;
+  --fs-small: 13px;
+  --fs-lead: clamp(16px, 1.3vw, 18px);
+  --fs-display: clamp(36px, 4.6vw, 64px);
+  --fs-hero: clamp(52px, 8vw, 116px);
+
+  /* Spacing */
+  --gutter: 24px;
+  --max-width: 1080px;
+  --section-y: clamp(52px, 6vw, 80px);
+
+  /* Shape */
+  --radius-sm: 14px;
+  --radius: 28px;
+  --radius-lg: 40px;
+  --radius-arch: 200px;
+  --radius-pill: 999px;
+
+  /* Effects */
+  --shadow-sm: 0 14px 30px rgba(42, 23, 25, .14);
+  --shadow: 0 22px 50px rgba(42, 23, 25, .22);
+  --ease: cubic-bezier(.2, .7, .2, 1);
+  --nav-h: 58px;
+}
+
+@media (max-width: 620px) {
+  :root { --gutter: 16px; }
+}
