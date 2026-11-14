@@ -143,87 +143,102 @@
       <p class="eyebrow">Built, tested and delivered</p>
     </div>
 
-    <!-- Forge -->
-    <article class="project project--forge reveal">
-      <div class="project__text">
-        <p class="project__kicker">Bachelor thesis &amp; client project · 2026</p>
+    <div class="work__grid">
+
+      <!-- Forge -->
+      <article class="project project--forge reveal">
+        <div class="project__thumb">
+          <img src="img/forge-admin.jpg" width="583" height="822" loading="lazy" decoding="async" alt="Forge admin: new member registration screen">
+        </div>
+        <p class="project__kicker">Client project · 2026</p>
         <h3 class="project__title">Forge<span>.</span></h3>
         <p class="project__tagline">A platform for modern gyms, built in Tirana. One system for the front desk, the door and every member.</p>
-        <ul class="project__features">
-          <li><b>RFID access</b>Members tap a card or enter an auto-generated 4-digit PIN at the door kiosk. Attendance is logged in real time.</li>
-          <li><b>Front desk</b>Register members with a photo, then manage plans, payments, equipment, announcements and an exercise library.</li>
-          <li><b>Classes &amp; PT</b>Group classes, attendance tracking and personal training packages.</li>
-          <li><b>Reports</b>Real-time data so the owner can make better decisions.</li>
-          <li><b>AI coach</b>Members get workout suggestions, calorie guidance and progress insights in the app.</li>
-          <li><b>Integrations</b>Built to connect with Strava, Google Fit, Garmin, Fitbit and Apple Watch.</li>
-        </ul>
         <ul class="tags"><li>Java</li><li>JavaFX</li><li>MySQL</li></ul>
-      </div>
-      <div class="project__shots">
-        <img class="forge-admin" src="img/forge-admin.jpg" width="583" height="822" loading="lazy" decoding="async" alt="Forge admin: new member registration with photo, identity and membership with RFID card">
-        <img class="forge-phone" src="img/forge-coach.jpg" width="220" height="410" loading="lazy" decoding="async" alt="Forge AI coach chat on a phone">
-        <img class="forge-kiosk" src="img/forge-kiosk.jpg" width="236" height="350" loading="lazy" decoding="async" alt="Forge door kiosk with RFID reader and PIN pad">
-      </div>
-    </article>
+        <details class="project__more">
+          <summary>Details</summary>
+          <ul class="project__features">
+            <li><b>RFID access</b>Members tap a card or enter an auto-generated 4-digit PIN at the door kiosk. Attendance is logged in real time.</li>
+            <li><b>Front desk</b>Register members with a photo, then manage plans, payments, equipment, announcements and an exercise library.</li>
+            <li><b>Classes &amp; PT</b>Group classes, attendance tracking and personal training packages.</li>
+            <li><b>Reports</b>Real-time data so the owner can make better decisions.</li>
+            <li><b>AI coach</b>Members get workout suggestions, calorie guidance and progress insights in the app.</li>
+            <li><b>Integrations</b>Built to connect with Strava, Google Fit, Garmin, Fitbit and Apple Watch.</li>
+          </ul>
+        </details>
+      </article>
 
-    <!-- KeyTours -->
-    <article class="project project--keytours reveal">
-      <div class="project__shots">
-        <img class="kt-home" src="img/keytours-home.jpg" width="457" height="258" loading="lazy" decoding="async" alt="KeyTours homepage hero with destination search">
-        <img class="kt-destinations" src="img/keytours-destinations.jpg" width="457" height="294" loading="lazy" decoding="async" alt="Destination cards with discounts and prices per person">
-        <img class="kt-auth" src="img/keytours-auth.jpg" width="668" height="568" loading="lazy" decoding="async" alt="Register and login forms in Albanian">
-        <img class="kt-admin" src="img/keytours-admin.jpg" width="370" height="435" loading="lazy" decoding="async" alt="KeyTours admin panel login">
-      </div>
-      <div class="project__text">
-        <p class="project__kicker">Full-stack web app · UNYT</p>
+      <!-- KeyTours -->
+      <article class="project project--keytours reveal" style="--delay:.08s">
+        <div class="project__thumb">
+          <img src="img/keytours-home.jpg" width="457" height="258" loading="lazy" decoding="async" alt="KeyTours homepage with destination search">
+        </div>
+        <p class="project__kicker">Full-stack web app</p>
         <h3 class="project__title">KeyTours</h3>
-        <p class="project__tagline">A booking website for a travel agency, fully in Albanian. Visitors find a trip, create an account and book it. The agency runs everything from its own admin panel.</p>
-        <ul class="project__features">
-          <li><b>Homepage</b>Hero with search by destination, category and price.</li>
-          <li><b>Destinations</b>Filter and sort trips, with discounts and price per person on every card.</li>
-          <li><b>User flow</b>Register, log in, book.</li>
-          <li><b>Admin panel</b>Dashboard and management of destinations and bookings.</li>
-        </ul>
+        <p class="project__tagline">A booking website for a travel agency, fully in Albanian. Visitors find a trip, create an account and book it.</p>
         <ul class="tags"><li>PHP</li><li>MySQL</li><li>XAMPP</li></ul>
-      </div>
-    </article>
+        <details class="project__more">
+          <summary>Details</summary>
+          <ul class="project__features">
+            <li><b>Homepage</b>Hero with search by destination, category and price.</li>
+            <li><b>Destinations</b>Filter and sort trips, with discounts and price per person on every card.</li>
+            <li><b>User flow</b>Register, log in, book.</li>
+            <li><b>Admin panel</b>The agency runs everything from its own panel: dashboard and management of destinations and bookings.</li>
+          </ul>
+        </details>
+      </article>
 
-    <!-- Inbox Assistant (chatbot) -->
-    <article class="project project--inbox reveal">
-      <div class="project__text">
-        <p class="project__kicker">Chatbot for small businesses · In development · 2026</p>
-        <h3 class="project__title">Inbox Assistant</h3>
-        <p class="project__tagline">An assistant for Instagram direct messages. Customers are guided with buttons and short forms, and every request arrives complete in a web panel where the team confirms, rejects or replies.</p>
-        <ul class="project__features">
-          <li><b>Conversation engine</b>Five customer flows, served in Albanian, English or Italian, detected from the customer's messages.</li>
-          <li><b>Team panel</b>Lists, search, notes and assignment, installable as a phone app with notifications.</li>
-          <li><b>Multi-tenant</b>Built to hold several businesses, each fully separated with row-level security.</li>
-          <li><b>Privacy &amp; security</b>Encrypted phone numbers and addresses, two-factor sign-in and an audit log.</li>
-          <li><b>Status</b>Foundation complete and tested. The Instagram connection is the next phase.</li>
-        </ul>
-        <ul class="tags"><li>TypeScript</li><li>Node.js</li><li>PostgreSQL</li><li>Docker</li></ul>
-      </div>
-      <div class="project__shots" aria-hidden="true">
-        <div class="chat">
-          <div class="chat__head">
-            <span class="chat__avatar">IA</span>
-            <span>Inbox Assistant<small>Automated · replies instantly</small></span>
-          </div>
-          <p class="chat__msg chat__msg--user">Hi! I'd like to place an order.</p>
-          <p class="chat__msg chat__msg--bot">Hello! I'm an automated assistant. How can I help you today?</p>
-          <div class="chat__options">
-            <span>New order</span>
-            <span>Track my order</span>
-            <span>Talk to a person</span>
+      <!-- Inbox Assistant (chatbot) -->
+      <article class="project project--inbox reveal" style="--delay:.16s">
+        <div class="project__thumb" aria-hidden="true">
+          <div class="chat">
+            <p class="chat__msg chat__msg--user">I'd like to order.</p>
+            <p class="chat__msg chat__msg--bot">Hi! I'm an automated assistant.</p>
+            <div class="chat__options"><span>New order</span><span>Track order</span></div>
           </div>
         </div>
-      </div>
-    </article>
+        <p class="project__kicker">Chatbot · In development</p>
+        <h3 class="project__title">Inbox Assistant</h3>
+        <p class="project__tagline">An Instagram DM assistant for small businesses. It guides customers with buttons and short forms, and the team handles every request in a web panel.</p>
+        <ul class="tags"><li>TypeScript</li><li>Node.js</li><li>PostgreSQL</li><li>Docker</li></ul>
+        <details class="project__more">
+          <summary>Details</summary>
+          <ul class="project__features">
+            <li><b>Conversation engine</b>Five customer flows, served in Albanian, English or Italian, detected from the customer's messages.</li>
+            <li><b>Team panel</b>Lists, search, notes and assignment, installable as a phone app with notifications.</li>
+            <li><b>Multi-tenant</b>Built to hold several businesses, each fully separated with row-level security.</li>
+            <li><b>Privacy &amp; security</b>Encrypted phone numbers and addresses, two-factor sign-in and an audit log.</li>
+            <li><b>Status</b>Foundation complete and tested. The Instagram connection is the next phase.</li>
+          </ul>
+        </details>
+      </article>
 
-    <!-- More projects -->
-    <h3 class="work__more reveal">More projects</h3>
-    <article class="project-card reveal">
-      <p class="eyebrow">University</p>
+      <!-- Website designs -->
+      <article class="project project--design reveal" style="--delay:.24s">
+        <div class="project__thumb" aria-hidden="true">
+          <div class="sites">
+            <div class="site site--a"><i></i><b>Florist</b><span></span><span></span><em></em></div>
+            <div class="site site--b"><i></i><b>Sweets</b><span></span><span></span><em></em></div>
+            <div class="site site--c"><i></i><b>Brand</b><span></span><span></span><em></em></div>
+          </div>
+        </div>
+        <p class="project__kicker">Web &amp; brand design</p>
+        <h3 class="project__title">Website Designs</h3>
+        <p class="project__tagline">Website and brand identity designs for different small businesses, each with its own look, colours and voice.</p>
+        <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Branding</li></ul>
+        <details class="project__more">
+          <summary>Details</summary>
+          <ul class="project__features">
+            <li><b>Florist atelier</b>Logo, brand identity and a landing page.</li>
+            <li><b>Sweets shop</b>Brand identity, website and a matching Instagram feed.</li>
+            <li><b>Approach</b>Every design starts from the business: palette, typography and layout are built around its character, then made to work on phones first.</li>
+          </ul>
+        </details>
+      </article>
+
+    </div>
+
+    <!-- University projects -->
+    <article class="project-strip reveal">
       <h3>University projects</h3>
       <p>Web apps, desktop applications and algorithm projects across several languages and frameworks, all with Git from day one.</p>
       <ul class="tags"><li>Git</li><li>Algorithms</li><li>Data structures</li></ul>
